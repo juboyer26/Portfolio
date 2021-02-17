@@ -1,0 +1,15 @@
+<div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li *ngFor="let items of navItems" class="nav-item">
+              <a class="nav-link active" aria-current="page" href="view/{{items.linkId}}">{{items.linkName}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div>
