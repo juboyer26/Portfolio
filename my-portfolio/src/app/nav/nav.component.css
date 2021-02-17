@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+}
+
+a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.mystyle{
+    background-color: aqua !important;
+}

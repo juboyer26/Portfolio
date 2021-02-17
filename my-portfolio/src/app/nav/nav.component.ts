@@ -7,21 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-
-  navItems = [
-    {
-      linkId: 1, linkName: 'Home'
-    },
-    {
-      linkId: 2, linkName: 'About'
-    },
-    {
-      linkId: 3, linkName: 'Contact'
-    }
-  ]
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  gotoTop(elementId: string) {
+    console.log(elementId);
+
+    if (elementId != null) {
+      var element = document.querySelector(elementId);
+      element.scrollIntoView();
+    }
   }
 
 }
