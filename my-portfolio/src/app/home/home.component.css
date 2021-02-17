@@ -1,0 +1,12 @@
+section {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Khula', sans-serif;
+}
+.header{
+    font-size: 6rem;
+    opacity: 1;
+    font-weight:900;
+    line-height: 1.2;
+}
