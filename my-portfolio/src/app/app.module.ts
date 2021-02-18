@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 
+declare var $: any;
+console.log(`jQuery version: ${$.fn.jquery}`);
+
 @NgModule({
   declarations: [
     AppComponent,
