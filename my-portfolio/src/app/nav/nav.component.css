@@ -6,6 +6,7 @@ a {
   font-family: 'Poppins', sans-serif;
   color: #D1D7E0 !important;
   margin: 13px;
+  cursor: pointer;
 }
 
 a:hover {

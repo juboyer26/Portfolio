@@ -1,12 +1,104 @@
-section {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: 'Khula', sans-serif;
+.section1 {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Khula', sans-serif;
+}
+.section2 {
+    position: relative;
+    width: 100%;
+    padding: 130px 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Khula', sans-serif;
 }
 .header{
     font-size: 6rem;
     opacity: 1;
     font-weight:900;
     line-height: 1.2;
+}
+
+.test{
+  position: relative;
+    width: 100%;
+    padding: 130px 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.card{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 35px;
+    border: none;
+    border-radius: 2px;
+    background-color: #191919 !important;
+    -webkit-box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 10%);
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 10%);
+    transition-timing-function: cubic-bezier(.25, .25, .75, .75);
+    transition-duration: 0.4s;
+    transition-property: opacity, transform;
+}
+
+.card.no-hover {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.portfolioSection{
+    background-color: black;
+    position: relative;
+    width: 100%;
+    padding: 130px 0;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.portfolioHeader h1:first-child, .portfolioHeader h2:first-child, .portfolioHeader h3:first-child {
+    margin-top: 0;
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+.portfolioHeader{
+ margin-bottom: 50px;
+ font-weight: 200;
+ font-size: 1.5rem;
+ color : #D1D7E0;
+}
+
+.h4{
+    color: #da2a6e;
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+    font-weight: 500;
+}
+
+.card p {
+    margin-top: 0;
+    white-space: pre-wrap;
+    color: #D1D7E0 ;
+}
+.card i {
+    color: #D1D7E0 ;
+}
+
+.item {
+    margin-bottom: 30px;
+}
+
+.icon {
+    width: auto; 
+    height: 44px; 
+    line-height: 44px;
+    text-align: center;
+    font-size: 44px;
+    display: block;
+    margin: auto;
 }
