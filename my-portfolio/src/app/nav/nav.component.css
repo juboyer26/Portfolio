@@ -1,11 +1,10 @@
-
-
 a {
   font-size: 25px;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
   color: #D1D7E0 !important;
   margin: 13px;
+  cursor: pointer
 }
 
 a:hover {
@@ -38,6 +37,10 @@ nav {
 
 i{
     color:white;
+}
+
+i:hover{
+    color: #da2a6e;
 }
 
 .navbar-toggler{

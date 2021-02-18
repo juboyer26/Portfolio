@@ -1,12 +1,36 @@
-section {
+/* section {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Khula', sans-serif;
+} */
+
+.header {
+  font-size: 6rem;
+  opacity: 1;
+  font-weight: 900;
+  line-height: 1.2;
 }
-.header{
-    font-size: 6rem;
-    opacity: 1;
-    font-weight:900;
-    line-height: 1.2;
+
+
+section {
+  position: relative;
+  width: 100%;
+  padding: 130px 0px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+#sectionAbout {
+  background-color: rgb(34, 33, 33);
+}
+
+.titleAbout{
+   font-size: 50px;
+   font-weight: 600;
+   font-family: 'Poppins',
+   sans-serif;
+   color: #D1D7E0 !important;
+   margin: 13px;
 }
