@@ -9,9 +9,9 @@ a {
 }
 
 a:hover {
-  color: #66FCF1 !important;
-  text-shadow: 1px 1px 2px #66FCF1;
-  ;
+  color: #da2a6e !important;
+  /* text-shadow: 1px 1px 2px #66FCF1; */
+  
 }
 
 .bg-light {
@@ -21,4 +21,27 @@ a:hover {
 nav {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* button{
+    color: #da2a6e !important;
+    border-color: none;
+}
+
+.global-color{
+    color: #da2a6e !important;
+}
+
+.global-color:hover {
+  color: #da2a6e !important;
+} */
+
+i{
+    color:white;
+}
+
+.navbar-toggler{
+  outline: none;
+  box-shadow: none;
+
 }
