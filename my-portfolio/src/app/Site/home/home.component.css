@@ -291,3 +291,10 @@
   -moz-animation-delay: 1s;
   animation-delay: 1s;
 }
+
+
+footer .copyright p {
+    color: #D1D7E0 ;
+    font-size: 14px;
+    line-height: 1.8;
+}
