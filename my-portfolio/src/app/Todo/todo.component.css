@@ -1,6 +1,4 @@
-*{
-    margin: 0;
-}
+
 
 .centered{
     /* justify-content: center;
@@ -15,7 +13,8 @@
     background-color: aquamarine;
 }
 section{
-    background-color: #0B0C10 ;
+    background-color: gray ;
+    height: 100%;
 }
 
 .centered h2{
@@ -55,6 +54,10 @@ section{
   width: 120px;
 }
 
-.mat-list-item{
-    cursor: pointer;
+.list{
+    margin-bottom: 5px;
+}
+
+li{
+  cursor: pointer;
 }
