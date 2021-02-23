@@ -1,72 +1,75 @@
 <section>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <form (ngSubmit)="onSubmit($event)">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Add List Item</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">List name</label>
-                            <input type="text" class="form-control" id="list-name" name="list">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Save</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </form>
-
+  <div style="position: absolute; margin: 50px;">
+    <a [routerLink]="['']"><i class="fa fa-arrow-left icon"></i></a>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <form (ngSubmit)="onSubmit($event)">
+          <div class="modal-header">
+            <h5 class="modal-title">Add List Item</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">List name</label>
+              <input type="text" class="form-control" id="list-name" name="list">
             </div>
-        </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </form>
+
+      </div>
     </div>
-    <div class="container centered">
-        <div class="row"></div>
-        <div class="row" style=" background-color: aquamarine; height: 100px;">
-            <div class="col-4 padded" style="background-color: rgb(110, 110, 110);">
-                <h2>LISTS</h2>
+  </div>
+  <div class="container centered">
+    <div class="row"></div>
+    <div class="row" style=" height: 100px;">
+      <div class="col-4 padded col">
+        <h2 style="color: #D1D7E0;">LISTS</h2>
 
-            </div>
-            <div class="col-8 padded">
-                <h2>TASKS</h2>
+      </div>
+      <div class="col-8 padded">
+        <h2 style="color: #D1D7E0;">TASKS</h2>
 
-            </div>
-        </div>
-        <div class="row" style=" background-color: rgb(109, 175, 212); min-height: 300px;">
-            <div class="col-4 padded" style="background-color: rgb(110, 110, 110); ">
-                <ul id="list" class="list-group">
-                    <li class="list-group-item list d-flex justify-content-between align-items-center"
-                        *ngFor="let i of list" (click)="chosenList(i.name)">{{i.name}}
-                        <span class="badge badge-primary badge-pill" style="color: #da2a6e;">{{i.task.length}}</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-8 padded">
-                <p *ngFor="let item of task;">{{item}}</p>
-
-            </div>
-        </div>
-        <div class="row" style=" background-color: rgb(255, 127, 223);height: 100px;">
-            <div class="col-4 padded" style="background-color: rgb(110, 110, 110);">
-                <button type="button" class="btn btn-info" style="width: 200px;" id="addList"
-                    (click)="displayAddList()"><i class="fa fa-plus"></i>
-                    Create
-                    List</button>
-
-            </div>
-            <div class="col-8 padded">
-                <div class="example-button-container">
-                    <button>
-                        <i class="fa fa-plus"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="row" style=" min-height: 300px;">
+      <div class="col-4 padded col">
+        <ul id="list" class="list-group">
+          <li class="list-group-item list d-flex justify-content-between align-items-center" *ngFor="let i of list"
+            (click)="chosenList(i.name)">{{i.name}}
+            <span class="badge badge-primary badge-pill" style="color: #da2a6e;">{{i.task.length}}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-8 padded">
+        <p style="color: #D1D7E0;"  *ngFor="let item of task;">{{item}}</p>
+
+      </div>
+    </div>
+    <div class="row" style=" height: 100px;">
+      <div class="col-4 padded col text-center" >
+        <button type="button" class="btn btn-info" style="width: 200px;" id="addList" (click)="displayAddList()"><i
+            class="fa fa-plus"></i>
+          Create
+          List</button>
+
+      </div>
+      <div class="col-8 padded">
+        <div class="example-button-container" style="margin-left: auto">
+          <button>
+            <i class="fa fa-plus"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 </section>

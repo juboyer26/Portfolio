@@ -9,12 +9,17 @@
     padding: 130px;
 }
 
+.col{
+    background-color: #191919;
+}
+
 .row{
-    background-color: aquamarine;
+    background-color: rgb(34, 33, 33);
 }
 section{
-    background-color: gray ;
+    background-color: #0B0C10;
     height: 100%;
+    width: 100%;
 }
 
 .centered h2{
@@ -23,7 +28,7 @@ section{
 }
 
 .padded{
-    padding: 20px;
+    padding: 30px;
 }
 
 .example-label {
@@ -60,4 +65,19 @@ section{
 
 li{
   cursor: pointer;
+}
+
+.icon {
+  width: auto;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 44px;
+  margin: 20px;
+  color: white;
+  /* text-decoration: none; */
+}
+
+.icon:hover{
+    color: #da2a6e;
 }
