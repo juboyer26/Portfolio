@@ -76,13 +76,15 @@
         </ul>
       </div>
       <div class="col-8 padded">
-        <p style="color: #D1D7E0;"  *ngFor="let item of task;">{{item}}</p>
+        <p style="" class="list-group-item list d-flex justify-content-between align-items-center"
+          *ngFor="let item of task;">{{item}}</p>
 
       </div>
     </div>
     <div class="row" style=" height: 100px;">
       <div class="col-4 padded col text-center" >
-        <button type="button" class="btn btn-info" style="width: 200px;" id="addList" (click)="displayAddList()"><i
+        <button type="button" style=" width: 200px;" class="btn btn-info button" id="addList"
+          (click)="displayAddList()"><i
             class="fa fa-plus"></i>
           Create
           List</button>
@@ -90,7 +92,7 @@
       </div>
       <div class="col-8 padded">
         <div class="example-button-container" style="margin-left: auto">
-          <button id="addTask" style="display: none;">
+          <button id="addTask" style="display: none;" class="button">
             <i class="fa fa-plus"></i>
           </button>
         </div>
