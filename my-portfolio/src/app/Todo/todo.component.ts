@@ -47,11 +47,22 @@ export class TodoComponent implements OnInit {
 
       $('#exampleModal').modal('show');
     });
+    $('#exit').on('click', function () {
+      console.log('modal');
+
+      $('#exampleModal').modal('hide');
+    });
 
     $('#addTask').on('click', function () {
       console.log('modal');
 
       $('#taskModal').modal('show');
+    });
+
+    $('#exit').on('click', function () {
+      console.log('modal');
+
+      $('#taskModal').modal('hide');
     });
   }
 
