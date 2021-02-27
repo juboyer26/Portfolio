@@ -7,6 +7,7 @@ import { NavComponent } from './Site/nav/nav.component';
 import { HomeComponent } from './Site/home/home.component';
 import { TodoComponent } from './Todo/todo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 declare var $: any;
@@ -23,7 +24,8 @@ console.log(`jQuery version: ${$.fn.jquery}`);
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

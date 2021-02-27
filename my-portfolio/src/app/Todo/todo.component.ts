@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+
 
 declare var $: any;
 
@@ -13,8 +15,9 @@ export class TodoComponent implements OnInit {
   list: any[];
   task: any[];
   selectedList: any;
-  showAddList: boolean = false;
-  constructor() {
+  showAddList: boolean = true;
+  newList: FormGroup;
+  constructor(private formBuilder: FormBuilder) {
     this.list = [{
       name: "Meeting",
       task: [
@@ -37,14 +40,15 @@ export class TodoComponent implements OnInit {
         { taskName: "eat food" }
       ]
     }]
+    this.newList = formBuilder.group({ list: " " })
   }
 
   ngOnInit(): void {
-    $('#addList').on('click', function () {
-      console.log("modal");
+    // $('#addList').on('click', function () {
+    //   console.log("modal");
 
-      $("#exampleModal").modal('show');
-    })
+    //   $("#exampleModal").modal('show');
+    // })
   }
 
   chosenList(selected: any) {
@@ -70,17 +74,16 @@ export class TodoComponent implements OnInit {
   }
 
   displayAddList() {
-    this.showAddList = !this.showAddList
+    this.showAddList = false
   }
 
   onSubmit(data: any) {
-    console.log();
+    console.log(data);
     var temp = {
-      name: data.name,
+      name: data.list,
       task: []
     }
     this.list.push(temp)
-
   }
 
 }

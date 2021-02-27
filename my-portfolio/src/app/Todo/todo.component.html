@@ -2,10 +2,10 @@
   <div style="position: absolute; margin: 50px;">
     <a [routerLink]="['']"><i class="fa fa-arrow-left icon"></i></a>
   </div>
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+  <div [hidden]="showAddList" class="modal" id="exampleModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <form (ngSubmit)="onSubmit($event)">
+        <form [formGroup]="newList">
           <div class="modal-header">
             <h5 class="modal-title">Add List Item</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -15,11 +15,12 @@
           <div class="modal-body">
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">List name</label>
-              <input type="text" class="form-control" id="list-name" name="list">
+              <input type="text" class="form-control" id="list-name" formControlName="list">
             </div>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-primary" data-dismiss="modal"
+              (click)="onSubmit(newList.value)">Save</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </form>
@@ -49,12 +50,12 @@
         </ul>
       </div>
       <div class="col-8 padded">
-        <p style="color: #D1D7E0;"  *ngFor="let item of task;">{{item}}</p>
+        <p style="color: #D1D7E0;" *ngFor="let item of task;">{{item}}</p>
 
       </div>
     </div>
     <div class="row" style=" height: 100px;">
-      <div class="col-4 padded col text-center" >
+      <div class="col-4 padded col text-center">
         <button type="button" class="btn btn-info" style="width: 200px;" id="addList" (click)="displayAddList()"><i
             class="fa fa-plus"></i>
           Create
