@@ -81,3 +81,19 @@ li{
 .icon:hover{
     color: #da2a6e;
 }
+
+.active{
+  background-color: #da2a6e !important;
+  border-color: #da2a6e;
+}
+
+.button{
+ 
+  background-color:white !important;
+  border-color: white;
+  border-radius: 25px;
+}
+
+.button:hover{
+  background-color:#da2a6e !important
+}

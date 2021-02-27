@@ -2,26 +2,52 @@
   <div style="position: absolute; margin: 50px;">
     <a [routerLink]="['']"><i class="fa fa-arrow-left icon"></i></a>
   </div>
-  <div [hidden]="showAddList" class="modal" id="exampleModal" tabindex="-1" role="dialog">
+  <div class="modal" id="exampleModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <form [formGroup]="newList">
+        <form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm.value)">
           <div class="modal-header">
             <h5 class="modal-title">Add List Item</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" id="exit" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">List name</label>
-              <input type="text" class="form-control" id="list-name" formControlName="list">
+              <input type="text" class="form-control" id="list-name" formControlName="listName" name="list"
+                placeholder="eg Travel" required>
+              <!-- <div>{{modelForm}}</div> -->
             </div>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-primary" data-dismiss="modal"
-              (click)="onSubmit(newList.value)">Save</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary button" [disabled]="!modelForm.valid">Save</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="taskModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <form [formGroup]="taskForm" (ngSubmit)="onSubmit(taskForm.value)">
+          <div class="modal-header">
+            <h5 class="modal-title">Add Task</h5>
+            <button type="button" class="close" id="exitList" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Task</label>
+              <input type="text" class="form-control" id="list-name" formControlName="taskName" name="list"
+                placeholder="eg Pack the bags" required>
+              <!-- <div>{{modelForm}}</div> -->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn button" [disabled]="!taskForm.valid">Save</button>
           </div>
         </form>
 
@@ -44,27 +70,28 @@
       <div class="col-4 padded col">
         <ul id="list" class="list-group">
           <li class="list-group-item list d-flex justify-content-between align-items-center" *ngFor="let i of list"
-            (click)="chosenList(i.name)">{{i.name}}
-            <span class="badge badge-primary badge-pill" style="color: #da2a6e;">{{i.task.length}}</span>
+            (click)="chosenList(i.name)"><span>{{i.name}}</span>
+            <span class="badge badge-primary badge-pill">{{i.task.length}}</span>
           </li>
         </ul>
       </div>
       <div class="col-8 padded">
-        <p style="color: #D1D7E0;" *ngFor="let item of task;">{{item}}</p>
+        <p class="list-group-item list d-flex justify-content-between align-items-center" *ngFor="let item of task;">
+          {{item}}</p>
 
       </div>
     </div>
     <div class="row" style=" height: 100px;">
       <div class="col-4 padded col text-center">
-        <button type="button" class="btn btn-info" style="width: 200px;" id="addList" (click)="displayAddList()"><i
-            class="fa fa-plus"></i>
+        <button type="button" style=" width: 200px;" class="btn btn-info button" id="addList"
+          (click)="displayAddList()"><i class="fa fa-plus"></i>
           Create
           List</button>
 
       </div>
       <div class="col-8 padded">
         <div class="example-button-container" style="margin-left: auto">
-          <button>
+          <button id="addTask" style="display: none;" class="button">
             <i class="fa fa-plus"></i>
           </button>
         </div>
