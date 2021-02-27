@@ -49,7 +49,7 @@ export class TodoComponent implements OnInit {
     });
 
     $('#exit').on('click', function () {
-      console.log('modal');
+      console.log('modal should close');
 
       $('#exampleModal').modal('hide');
     });
