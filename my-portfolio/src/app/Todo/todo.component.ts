@@ -47,6 +47,7 @@ export class TodoComponent implements OnInit {
 
       $('#exampleModal').modal('show');
     });
+
     $('#exit').on('click', function () {
       console.log('modal');
 
@@ -59,8 +60,8 @@ export class TodoComponent implements OnInit {
       $('#taskModal').modal('show');
     });
 
-    $('#exit').on('click', function () {
-      console.log('modal');
+    $('#exitList').on('click', function () {
+      console.log('modal should close');
 
       $('#taskModal').modal('hide');
     });
