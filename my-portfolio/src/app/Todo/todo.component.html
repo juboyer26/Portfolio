@@ -8,7 +8,7 @@
         <form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm.value)">
           <div class="modal-header">
             <h5 class="modal-title">Add List Item</h5>
-            <button type="button" class="close" id="exit" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" style="border: none" id="exit" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -17,7 +17,6 @@
               <label for="recipient-name" class="col-form-label">List name</label>
               <input type="text" class="form-control" id="list-name" formControlName="listName" name="list"
                 placeholder="eg Travel" required>
-              <!-- <div>{{modelForm}}</div> -->
             </div>
           </div>
           <div class="modal-footer">
@@ -34,7 +33,7 @@
         <form [formGroup]="taskForm" (ngSubmit)="onSubmit(taskForm.value)">
           <div class="modal-header">
             <h5 class="modal-title">Add Task</h5>
-            <button type="button" class="close" id="exitList" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" id="exitList" style="border: none" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -43,7 +42,6 @@
               <label for="recipient-name" class="col-form-label">Task</label>
               <input type="text" class="form-control" id="list-name" formControlName="taskName" name="list"
                 placeholder="eg Pack the bags" required>
-              <!-- <div>{{modelForm}}</div> -->
             </div>
           </div>
           <div class="modal-footer">
